@@ -11,19 +11,43 @@ body {
     overflow: hidden;
 }
 
-.title {  
+@media (max-width: 768px) {
+    .title {
+        margin-bottom: 120px;
+    }
+
+    #lotti {
+        margin-top: 80px;
+    }
+}
+
+
+/* .title {  
     margin-top: 50px;
     font-size: 50px;
     margin-bottom: 220px;
+} */
+
+.title {
+    margin-top: 50px;
+    margin-bottom: 220px;
+    font-size: clamp(24px, 5vw, 50px); /* Scales between 24px and 50px */
 }
+
 
 .title h1 {
     color: #177f1a;
 }
 
-.info {
+/* .info {
     margin-top: 20px;
     font-size: 9px;
+    color: #064c08;
+} */
+
+.info {
+    margin-top: 20px;
+    font-size: clamp(10px, 1.2vw, 14px);
     color: #064c08;
 }
 
@@ -32,7 +56,7 @@ body {
     transform: scaleX(-1);
 }
 
-#game {
+/* #game {
     position: relative;
     width: 600px; 
     height: 200px;
@@ -41,7 +65,20 @@ body {
     overflow: hidden;
     border-radius: 10px;
     padding-bottom: 10px;
+} */
+
+#game {
+    position: relative;
+    width: 90%;              /* Responsive width */
+    max-width: 600px;        /* Prevent it from getting too big */
+    height: 200px;
+    margin: auto;
+    background-color: #c8e6c9;
+    overflow: hidden;
+    border-radius: 10px;
+    padding-bottom: 10px;
 }
+
   
 .dino-container {
     width: 100%;
@@ -90,7 +127,7 @@ body {
 }
 
 
-#lotti {
+/* #lotti {
     margin-top: 150px;
     height: 60px;
     width: 200px;
@@ -101,7 +138,16 @@ body {
     cursor: pointer;
     animation: float 2s ease-in-out infinite;
     box-shadow: 0 8px 16px rgba(238, 2, 2, 0.514);
+} */
+
+#lotti {
+    margin-top: 150px;
+    height: 60px;
+    width: 60%;
+    max-width: 200px;
+    min-width: 120px;
 }
+
 
 #lotti p {
     font-weight: 600;
@@ -134,4 +180,4 @@ body {
     opacity: 0;
     transition: opacity 0.8s ease;
 }
-  
+
