@@ -22,11 +22,6 @@ body {
 }
 
 
-/* .title {  
-    margin-top: 50px;
-    font-size: 50px;
-    margin-bottom: 220px;
-} */
 
 .title {
     margin-top: 50px;
@@ -39,11 +34,7 @@ body {
     color: #177f1a;
 }
 
-/* .info {
-    margin-top: 20px;
-    font-size: 9px;
-    color: #064c08;
-} */
+
 
 .info {
     margin-top: 20px;
@@ -56,16 +47,7 @@ body {
     transform: scaleX(-1);
 }
 
-/* #game {
-    position: relative;
-    width: 600px; 
-    height: 200px;
-    margin: auto;
-    background-color: #c8e6c9;
-    overflow: hidden;
-    border-radius: 10px;
-    padding-bottom: 10px;
-} */
+
 
 #game {
     position: relative;
@@ -89,7 +71,7 @@ body {
 #dino {
     width: 80px;
     height: 80px;
-    background-image: url("src/images/dino.png");
+    background-image: url("dino.png");
     background-size: cover;
     position: absolute;
     bottom: 0;
@@ -116,7 +98,7 @@ body {
 #cake {
     width: 40px;
     height: 40px;
-    background-image: url("src/images/cake.png");
+    background-image: url("cake.png");
     background-size: cover;
     position: absolute;
     bottom: 0;
@@ -127,7 +109,7 @@ body {
 }
 
 
-/* #lotti {
+#lotti {
     margin-top: 150px;
     height: 60px;
     width: 200px;
@@ -138,15 +120,8 @@ body {
     cursor: pointer;
     animation: float 2s ease-in-out infinite;
     box-shadow: 0 8px 16px rgba(238, 2, 2, 0.514);
-} */
-
-#lotti {
-    margin-top: 150px;
-    height: 60px;
-    width: 60%;
-    max-width: 200px;
-    min-width: 120px;
 }
+
 
 
 #lotti p {
