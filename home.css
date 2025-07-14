@@ -8,46 +8,114 @@ body {
     height: 100%;
     width: 100%;
     box-sizing: border-box;
-}
-
-.collage-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-    /* gap: 10px; */
-    grid-auto-rows: 339px;
-    max-width: 100vw;
-    /* height: 90vh; */
-}
-  
-.collage-item {
-    position: relative;
     overflow: hidden;
 }
 
-  
-/* Bilder */
+
+.collage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  grid-auto-rows: 339px;
+  max-width: 100vw;
+  gap: 8px;
+  padding: 10px;
+}
+
+.collage-item {
+  position: relative;
+  overflow: hidden;
+}
+
 .collage-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
 }
-#box9 {
-    grid-column: span 4;
-}
-#box9 img {
-    object-position: center 20%;
-}
-  
-/* Größenvariationen */
+
+
 .collage-item.tall {
-    grid-row: span 2;
+  grid-row: span 2;
 }
+
 .collage-item.wide {
-    grid-column: span 2;
+  grid-column: span 2;
+}
+
+#box9 {
+  grid-column: span 4;
+}
+
+#box9 img {
+  object-position: center 20%;
+}
+
+
+
+
+.modal {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+
+    pointer-events: none; 
 }
   
-/* Responsiv */
+.modal-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    width: 90%;
+    max-width: 800px;
+    pointer-events: none; 
+}
+  
+.modal-section {
+    padding: 1rem;
+    text-align: center;
+   
+    font-size: clamp(3rem, 8vw, 8rem);
+    color: white;
+   
+}
+  
+.left-animation {
+    margin-left: -5vw;
+}
+
+
+.center-text {
+    text-align: center;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: bold;
+    
+    border-radius: 12px;
+    padding: 1rem;
+   
+    width: clamp(250px, 60vw,400px);
+
+    margin-right: 0;
+}
+
+.center-text h1 {
+    -webkit-text-stroke: 2px orangered;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+  
+.flipped-emoji {
+    display: inline-block;
+    transform: scaleX(-1);
+    margin-left: 3vw;
+}
 
 @media (max-width: 600px) {
     .collage-grid {
@@ -64,60 +132,58 @@ body {
 }
 
 
-.modal {
-    position: fixed;
-    top: 40%;
-    left: 0;
-    width: 100%;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-    /* background-color: rgba(0, 0, 0, 0.2); halbtransparent für Lesbarkeit */
-    /* background-color: blueviolet; */
-    /* background: transparent; Kein Hintergrund */
-    pointer-events: none; /* Damit Collage klickbar bleibt, falls nötig */
-}
-  
-.modal-content {
+@media (max-width: 480px) {
+  .collage-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    align-items: center;
-    width: 90%;
-    max-width: 800px;
-    pointer-events: all; /* Modal selbst bleibt interaktiv */
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 160px;
+    gap: 6px;
+    padding: 6px;
+  }
+
+  #box5 {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  #box7 {
+    grid-row: 4;
+    grid-column: 2;
+  }
+
+  #box8, #box11 {
+    grid-row: 4;
+  }
+
+  #box9 {
+    grid-column: span 3;
+  }
 }
-  
-.modal-section {
+
+
+
+@media (max-width: 480px) {
+  .modal-content {
     padding: 1rem;
     text-align: center;
-    font-size: 12rem;
-    color: white;
-    /* backdrop-filter: blur(4px); Optional: leichter Blur */
-}
-  
-.left-animation {
-    margin-left: -7vw;
-}
+  }
 
-/* Mitteltext */
-.center-text {
-    font-size: 2.5rem;
-    font-weight: bold;
-    /* background-color: rgba(0, 0, 0, 0.2); halbtransparent für Lesbarkeit */
-    border-radius: 12px;
-    padding: 1rem;
-    width: 400px;
-    margin-right: 20px;
-}
+  .modal-section {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+  }
 
-.center-text h1 {
-    -webkit-text-stroke: 2px orangered;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-  
-.flipped-emoji {
-    display: inline-block;
-    transform: scaleX(-1);
+  .center-text {
+    font-size: 1rem;
+    width: 80%;
+  }
+
+  .left-animation {
+    margin-right: -15px;
+    font-size: 50px;
+  }
+
+  .right-animation {
+    font-size: 50px;
+    margin-left: -35px;
+  }
 }

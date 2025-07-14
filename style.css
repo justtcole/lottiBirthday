@@ -8,12 +8,15 @@ body {
     background-color: #c8e6c9; 
     font-family: sans-serif;
     text-align: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .title {
-        margin-bottom: 120px;
+        margin-bottom: 120px;   
+    }
+    .title h1 {
+        font-size: 50px;
     }
 
     #lotti {
@@ -21,7 +24,11 @@ body {
     }
 }
 
-
+@media (min-width: 540px) {
+    .title h1 {
+        font-size: 35px;
+    }
+}
 
 .title {
     margin-top: 50px;
@@ -61,6 +68,21 @@ body {
     padding-bottom: 10px;
 }
 
+@media (max-width: 480px) {
+    #game {
+        height: 150px;
+        margin-top: 20%;
+    }
+    .title {
+        margin-bottom: 10%;
+        font-size: 12px;
+        margin-top: 20%;
+    }
+    .info {
+        margin-bottom: -10%;
+        margin-top: 20%;
+    }
+}
   
 .dino-container {
     width: 100%;
